@@ -1,0 +1,252 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/startup/screen1.gd" type="Script" id=1]
+[ext_resource path="res://scenes/common/tex_color_white.png" type="Texture" id=2]
+[ext_resource path="res://scenes/startup/channel.png" type="Texture" id=3]
+[ext_resource path="res://scenes/startup/screen0.gd" type="Script" id=4]
+[ext_resource path="res://scenes/common/tex_color_black.png" type="Texture" id=5]
+
+[node name="main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="screen0" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background0" type="TextureRect" parent="screen0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background1" type="TextureRect" parent="screen0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="channel_grid" type="GridContainer" parent="screen0"]
+anchor_left = 0.094
+anchor_top = 0.083
+anchor_right = 0.906
+anchor_bottom = 0.708
+margin_left = -0.256004
+margin_top = 0.199997
+margin_right = 0.255981
+margin_bottom = 0.200012
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="channel" type="TextureRect" parent="screen0/channel_grid"]
+margin_right = 205.0
+margin_bottom = 122.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="channel2" type="TextureRect" parent="screen0/channel_grid"]
+margin_left = 209.0
+margin_right = 414.0
+margin_bottom = 122.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="channel3" type="TextureRect" parent="screen0/channel_grid"]
+margin_left = 418.0
+margin_right = 623.0
+margin_bottom = 122.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="channel4" type="TextureRect" parent="screen0/channel_grid"]
+margin_left = 627.0
+margin_right = 832.0
+margin_bottom = 122.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="channel5" type="TextureRect" parent="screen0/channel_grid"]
+margin_top = 126.0
+margin_right = 205.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="channel6" type="TextureRect" parent="screen0/channel_grid"]
+margin_left = 209.0
+margin_top = 126.0
+margin_right = 414.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="channel7" type="TextureRect" parent="screen0/channel_grid"]
+margin_left = 418.0
+margin_top = 126.0
+margin_right = 623.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="channel8" type="TextureRect" parent="screen0/channel_grid"]
+margin_left = 627.0
+margin_top = 126.0
+margin_right = 832.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="channel9" type="TextureRect" parent="screen0/channel_grid"]
+margin_top = 252.0
+margin_right = 205.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="channel10" type="TextureRect" parent="screen0/channel_grid"]
+margin_left = 209.0
+margin_top = 252.0
+margin_right = 414.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="channel11" type="TextureRect" parent="screen0/channel_grid"]
+margin_left = 418.0
+margin_top = 252.0
+margin_right = 623.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="channel12" type="TextureRect" parent="screen0/channel_grid"]
+margin_left = 627.0
+margin_top = 252.0
+margin_right = 832.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="screen1" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background1" type="TextureRect" parent="screen1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="screen1/background1"]
+anchor_left = 0.2
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+margin_left = -0.393021
+margin_top = -3.8147e-06
+margin_right = -0.0209961
+margin_bottom = -0.200012
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="screen1/background1/Control"]
+anchor_right = 1.0
+anchor_bottom = 0.1
+bbcode_enabled = true
+bbcode_text = "[color=#666666][right](not tendo)"
+text = "(not tendo)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="screen1/background1/Control"]
+anchor_left = 0.026
+anchor_top = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+bbcode_enabled = true
+bbcode_text = "[color=#00aaff]Something about motion controls
+
+press a key"
+text = "Something about motion controls
+
+press a key"
+__meta__ = {
+"_edit_use_anchors_": false
+}

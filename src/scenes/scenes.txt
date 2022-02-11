@@ -1,0 +1,28 @@
+Frii Sports sports:
+
+res://
+	scenes/
+		common/		- shared content
+		mainmenu/
+		
+		airscene/	- Air Sports
+		raqscene/	- Racquet Sports: Tennis, badminton
+		swmscene/	- Swimming
+
+WS2 sports:
+	ARCSCENE	Archery
+	BICSCENE	Bike
+	BSKSCENE	Basketball
+	BWLSCENE	Bowling
+	CANSCENE	Canoe
+	DGLSCENE	Discgolf
+	FLDSCENE	Discdog
+	GLFSCENE	Golf
+	JSKSCENE	Jetski & wakeboard
+	KOKESHI		Parachute??
+	OMKSCENE	Parachute??
+	PLNSCENE	Air
+	PNGSCENE	Pong
+	SEQSCENE
+	STRAPSCE
+	SWFSCENE	Sword
