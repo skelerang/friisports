@@ -11,5 +11,6 @@ export_presets.cfg
 data_*/
 
 
-# agame-specific
+# game-specific
 build*/*
+Godot*
