@@ -14,6 +14,10 @@ config/name="Frii Sports"
 run/main_scene="res://scenes/startup.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+HomeMenu="*res://autoload/autoload_homemenu.gd"
+
 [input]
 
 airscene_glide_left={

@@ -250,3 +250,5 @@ press a key"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="nohome" type="Node" parent="."]

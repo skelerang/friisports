@@ -11,7 +11,7 @@ onready var racquet = $racquet
 onready var shuttlecock = get_parent().get_node("shuttlecock")
 
 # -- Debug
-onready var debughud = get_tree().root.get_child(0).get_node("debughud")
+onready var debughud = get_tree().root.get_node("main").get_node("debughud")
 onready var debug_dir_dot = debughud.get_node("badm").get_node("dir").get_child(0)
 onready var debug_pow_bar = debughud.get_node("badm").get_node("pow")
 

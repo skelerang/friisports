@@ -1,0 +1,106 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://autoload/homemenu/tex_homemenu_box.png" type="Texture" id=1]
+[ext_resource path="res://autoload/homemenu/tex_homemenu_overlay.png" type="Texture" id=2]
+[ext_resource path="res://autoload/homemenu/scripts/homemenu.gd" type="Script" id=3]
+
+[node name="main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="box_top" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.16
+margin_top = -4.0
+margin_bottom = -0.800003
+texture = ExtResource( 1 )
+patch_margin_top = 4
+patch_margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="but_close" type="Button" parent="box_top"]
+anchor_left = 0.8
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+text = "[home] close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mid" type="Control" parent="."]
+anchor_top = 0.16
+anchor_right = 1.0
+anchor_bottom = 0.8
+margin_top = -7.62939e-06
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hbox" type="HBoxContainer" parent="mid"]
+anchor_left = 0.1
+anchor_top = 0.35
+anchor_right = 0.9
+anchor_bottom = 0.65
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="but_mainmenu" type="Button" parent="mid/hbox"]
+margin_right = 373.0
+margin_bottom = 115.0
+size_flags_horizontal = 3
+text = "Main Menu"
+
+[node name="Control" type="Control" parent="mid/hbox"]
+margin_left = 377.0
+margin_right = 441.0
+margin_bottom = 115.0
+rect_min_size = Vector2( 64, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="but_exitgame" type="Button" parent="mid/hbox"]
+margin_left = 445.0
+margin_right = 819.0
+margin_bottom = 115.0
+size_flags_horizontal = 3
+text = "Exit"
+
+[node name="box_bottom" type="NinePatchRect" parent="."]
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 4.0
+texture = ExtResource( 1 )
+patch_margin_top = 4
+patch_margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="box_top/but_close" to="." method="_on_but_close_pressed"]
+[connection signal="pressed" from="mid/hbox/but_mainmenu" to="." method="_on_but_mainmenu_pressed"]
+[connection signal="pressed" from="mid/hbox/but_exitgame" to="." method="_on_but_exitgame_pressed"]
