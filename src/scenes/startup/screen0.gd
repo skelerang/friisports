@@ -13,10 +13,11 @@ onready var bg = $background1
 var init_time
 
 func _ready():
+	Globals.cursor = false
 	show()
 	init_time = OS.get_ticks_msec()
 
-func _process(delta):
+func _process(_delta):
 	var t = (OS.get_ticks_msec() - init_time) 
 	
 	var ch_t = clamp((t - ch_start) * ch_speed, 0, 6)

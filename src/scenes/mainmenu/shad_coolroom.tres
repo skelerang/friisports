@@ -1,0 +1,29 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type spatial;
+render_mode unshaded;
+
+uniform vec2 movement = vec2(0,1);
+
+void fragment() {
+	float t = TIME;
+	vec2 uv = UV;
+	uv.y += t
+	vec2 scale = vec2(100.,20.);
+	
+	//float multiplier = uv.y * (abs(uv.x) + 1.) - 1.;
+	//float multiplier = (-abs(uv.x) + .5 * uv.y) - .1;
+	float multiplier = (uv.y - .2) * .2;
+	
+	vec4 out_color = vec4(multiplier);
+	
+	//float gridPointX = step(float(mod(uv.x * scale.x, 1.0)), 0.1);
+	//float gridPointY = step(float(mod(uv.y * scale.y, 1.0)), 0.1);
+	float gridPointX = step(float(mod(uv.x * scale.x, 1.0)), 0.1);
+	float gridPointY = step(float(mod(uv.y * scale.y, 1.0)), 0.1);
+	//float gridPoint = min(1.0, gridPointX + gridPointY);
+	float gridPoint = min(1.0, gridPointX + gridPointY);
+	
+	ALBEDO = out_color.rgb * gridPoint;
+}"

@@ -43,10 +43,11 @@ func _ready():
 	else:
 		title.text = "can't open directory!! \n" + path
 	
-func on_input(ev):
-	if ev is InputEventMouseButton and ev.is_pressed() and ev.doubleclick:
-		change_scene()
+func on_input(_ev):
+	pass
 func select_scene(scene):
 	selected_scene = scene
+	change_scene()
 func change_scene():
+	#warning-ignore:return_value_discarded
 	get_tree().change_scene(selected_scene)

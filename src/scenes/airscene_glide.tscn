@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/airscene/glider.glb" type="PackedScene" id=1]
 [ext_resource path="res://scenes/common/mdl_island_lowpoly.glb" type="PackedScene" id=2]
+[ext_resource path="res://scenes/common/tex_color_black.png" type="Texture" id=3]
 [ext_resource path="res://scenes/airscene/scripts/control_glider.gd" type="Script" id=8]
 [ext_resource path="res://scenes/airscene/scripts/cameraman_air_follow.gd" type="Script" id=9]
 
@@ -38,11 +39,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="hud"]
+[node name="TextureRect" type="TextureRect" parent="hud"]
+self_modulate = Color( 1, 1, 1, 0.25098 )
+anchor_right = 0.251
+anchor_bottom = 0.067
+margin_right = 1.97598
+margin_bottom = -0.200001
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="hud/TextureRect"]
 margin_right = 357.0
 margin_bottom = 39.0
 bbcode_enabled = true
 bbcode_text = "airscene glider: use joystick controller,
 only way to exit is by closing the game."
 text = "airscene glider: use joystick controller,
-only way to exit is by closing the game."
+HOME / PS / Guide btn: Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,26 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type spatial;
+render_mode unshaded;
+
+void fragment() {
+	float t = TIME;
+	vec2 uv = UV;
+	vec2 uv2 = uv * vec2(100.,20.);
+	uv2.y -= t * .5;
+	
+	float multiplier = (uv.y - .2) * .05;
+	vec4 out_color = vec4(multiplier);
+	
+	// janky grid:
+	//float gridPointX = step(float(mod(uv2.x * scale.x, 1.0)), 0.1);
+	//float gridPointY = step(float(mod(uv2.y * scale.y, 1.0)), 0.1);
+	//float gridPoint = min(1.0, gridPointX + gridPointY);
+	
+	float gridX = clamp(abs(mod(uv2.x, 1.0)*8. -4.)-3.,0,1);
+	float gridY = clamp(abs(mod(uv2.y, 1.0)*8. -4.)+uv.y*2.-3.,0,1);
+	float grid = gridX + gridY;
+	
+	ALBEDO = out_color.rgb * grid;
+}"

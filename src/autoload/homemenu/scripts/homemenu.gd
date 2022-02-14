@@ -39,11 +39,12 @@ func _process(delta):
 	box_top.anchor_top = -box_top_height + (0 + box_top_height) * visibility
 	box_top.anchor_bottom = 0 + (box_top_height - 0) * visibility
 	box_bottom.anchor_top = 1 + (1 - box_bottom_height - 1) * visibility
-	box_bottom.anchor_bottom = 1 + box_bottom_height + (1 - 1 + box_bottom_height) * visibility
+	box_bottom.anchor_bottom = 1 + box_bottom_height + (1 - (1 + box_bottom_height)) * visibility
 
 func _on_but_close_pressed():
 	state = ST_CLOSING
 func _on_but_mainmenu_pressed():
+	#warning-ignore:return_value_discarded
 	get_tree().change_scene("res://scenes/mainmenu.tscn")
 func _on_but_exitgame_pressed():
 	get_tree().quit()

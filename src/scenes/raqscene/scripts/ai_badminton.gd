@@ -30,8 +30,6 @@ func _ready():
 	if lefthanded:
 		raq_offset = -raq_offset
 		racquet.transform.origin.x = -racquet.transform.origin.x
-	
-	
 
 func _physics_process(delta):
 	
@@ -41,7 +39,6 @@ func _physics_process(delta):
 		move_target.x = clamp(move_target.x, play_area[0], play_area[1])
 		move_target.y = 0
 		move_target.z = clamp(move_target.z, play_area[2], play_area[3])
-		
 		move_target.x += raq_offset
 	
 	else:
@@ -56,7 +53,6 @@ func _physics_process(delta):
 	var ball_dist = (ball.global_transform.origin - racquet.global_transform.origin).length()
 	
 	if ball_dist < hit_dist_threshold and game.ball_owner != 1:
-		print(ball_dist)
 		ball.velocity = -ball.velocity.normalized()
 		ball.velocity *= 500
 		game._set_ball_owner(1)

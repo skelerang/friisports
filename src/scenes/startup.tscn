@@ -241,14 +241,27 @@ anchor_top = 0.75
 anchor_right = 1.0
 anchor_bottom = 1.0
 bbcode_enabled = true
-bbcode_text = "[color=#00aaff]Something about motion controls
+bbcode_text = "[color=#00aaff]Still no motion controls.
 
-press a key"
-text = "Something about motion controls
+Press A, START or some other such button"
+text = "Still no motion controls.
 
-press a key"
+Press A, START or some other such button"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="screen1/background1/Control"]
+anchor_left = 0.331
+anchor_top = 0.325
+anchor_right = 0.588
+anchor_bottom = 0.375
+margin_left = -0.29097
+margin_top = 0.0650024
+margin_right = -0.133179
+margin_bottom = 0.0749969
+bbcode_enabled = true
+bbcode_text = "[color=#00aaff]GAMEPAD REQUIRED!"
+text = "GAMEPAD REQUIRED!"
 
 [node name="nohome" type="Node" parent="."]

@@ -12,6 +12,7 @@ onready var model = $model
 func _physics_process(delta):
 	velocity *= 1 - drag * delta
 	velocity += gravity * delta
+	#warning-ignore:return_value_discarded
 	move_and_slide(velocity * delta, Vector3.UP)
 	if get_slide_count() != 0:
 		velocity = Vector3.ZERO

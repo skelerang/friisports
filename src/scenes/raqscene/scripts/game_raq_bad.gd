@@ -70,7 +70,7 @@ func _physics_process(delta):
 		trajectory2.clear()
 		trajectory2.begin(1, null)
 	
-	for i in range(trajectory_count):
+	for _i in range(trajectory_count):
 		if ball_position.y > target_height:
 			ball_velocity *= 1 - ball_drag * delta
 			ball_velocity += ball_gravity * delta
