@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/mainmenu/mdl_settingsmenu_background.glb" type="PackedScene" id=1]
 [ext_resource path="res://scenes/mainmenu/mat_settingsmenu_bg.tres" type="Material" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/common/tex_color_black.png" type="Texture" id=4]
 [ext_resource path="res://scenes/mainmenu/tex_menu_box.png" type="Texture" id=5]
 [ext_resource path="res://scenes/mainmenu/tex_settingsmenu_tab.svg" type="Texture" id=6]
+[ext_resource path="res://scenes/common/tex_color_white.png" type="Texture" id=7]
 
 [node name="main" type="Control"]
 anchor_right = 1.0
@@ -30,6 +31,9 @@ rect_clip_content = true
 texture = ExtResource( 5 )
 patch_margin_top = 4
 patch_margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="tab1" type="NinePatchRect" parent="menu/top"]
 anchor_left = 0.1
@@ -57,6 +61,9 @@ bbcode_enabled = true
 bbcode_text = "[color=#000000]Settings Menu"
 text = "Settings Menu"
 fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="tab2" type="NinePatchRect" parent="menu/top"]
 anchor_left = 0.15
@@ -120,7 +127,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="menu/mid"]
+[node name="menu_settings" type="VBoxContainer" parent="menu/mid"]
+visible = false
 anchor_left = 0.2
 anchor_top = 0.15
 anchor_right = 0.8
@@ -129,24 +137,100 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="controls" type="Button" parent="menu/mid/VBoxContainer"]
+[node name="but_menu_controls" type="Button" parent="menu/mid/menu_settings"]
 margin_right = 614.0
-margin_bottom = 95.0
+margin_bottom = 70.0
 size_flags_vertical = 3
 text = "Controls"
 
-[node name="audio" type="Button" parent="menu/mid/VBoxContainer"]
-margin_top = 99.0
+[node name="but_menu_audio" type="Button" parent="menu/mid/menu_settings"]
+margin_top = 74.0
 margin_right = 614.0
-margin_bottom = 194.0
+margin_bottom = 145.0
 size_flags_vertical = 3
 text = "Audio"
 
-[node name="Button3" type="Button" parent="menu/mid/VBoxContainer"]
-margin_top = 198.0
+[node name="Button3" type="Button" parent="menu/mid/menu_settings"]
+margin_top = 149.0
+margin_right = 614.0
+margin_bottom = 219.0
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="menu/mid/menu_settings"]
+margin_top = 223.0
 margin_right = 614.0
 margin_bottom = 294.0
 size_flags_vertical = 3
+
+[node name="menu_controls" type="VBoxContainer" parent="menu/mid"]
+visible = false
+anchor_left = 0.2
+anchor_top = 0.15
+anchor_right = 0.8
+anchor_bottom = 0.85
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="but_menu_controls_bind" type="Button" parent="menu/mid/menu_controls"]
+margin_right = 614.0
+margin_bottom = 70.0
+size_flags_vertical = 3
+text = "Binds"
+
+[node name="Button2" type="Control" parent="menu/mid/menu_controls"]
+margin_top = 74.0
+margin_right = 614.0
+margin_bottom = 145.0
+size_flags_vertical = 3
+
+[node name="Button3" type="Control" parent="menu/mid/menu_controls"]
+margin_top = 149.0
+margin_right = 614.0
+margin_bottom = 219.0
+size_flags_vertical = 3
+
+[node name="Button4" type="Control" parent="menu/mid/menu_controls"]
+margin_top = 223.0
+margin_right = 614.0
+margin_bottom = 294.0
+size_flags_vertical = 3
+
+[node name="menu_controls_bind" type="VBoxContainer" parent="menu/mid"]
+visible = false
+anchor_left = 0.2
+anchor_top = 0.15
+anchor_right = 0.8
+anchor_bottom = 0.85
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bind" type="RichTextLabel" parent="menu/mid/menu_controls_bind"]
+margin_right = 614.0
+margin_bottom = 294.0
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[center]Nothing here yet."
+text = "Nothing here yet."
+
+[node name="menu_audio" type="VBoxContainer" parent="menu/mid"]
+visible = false
+anchor_left = 0.2
+anchor_top = 0.15
+anchor_right = 0.8
+anchor_bottom = 0.85
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bind" type="RichTextLabel" parent="menu/mid/menu_audio"]
+margin_right = 614.0
+margin_bottom = 294.0
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[center]Nothing here yet."
+text = "Nothing here yet."
 
 [node name="bottom" type="NinePatchRect" parent="menu"]
 anchor_top = 0.8
@@ -156,13 +240,19 @@ margin_bottom = 4.0
 texture = ExtResource( 5 )
 patch_margin_top = 4
 patch_margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Button" type="Button" parent="menu/bottom"]
+[node name="back" type="Button" parent="menu/bottom"]
 anchor_left = 0.01
 anchor_top = 0.1
 anchor_right = 0.2
 anchor_bottom = 0.9
 text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="background3d" type="Spatial" parent="."]
 
@@ -180,5 +270,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 4 )
 expand = true
+
+[node name="overlay_white" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+
+[node name="nohome" type="Node" parent="."]
+
+[connection signal="pressed" from="menu/mid/menu_settings/but_menu_controls" to="." method="_goto_menu_controls"]
+[connection signal="pressed" from="menu/mid/menu_settings/but_menu_audio" to="." method="_goto_menu_audio"]
+[connection signal="pressed" from="menu/mid/menu_controls/but_menu_controls_bind" to="." method="_goto_menu_controls_bind"]
+[connection signal="pressed" from="menu/bottom/back" to="." method="_on_back_pressed"]
 
 [editable path="background3d/mdl_settingsmenu_background"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/mainmenu/tex_ui_sportbutton_hover.png" type="Texture" id=1]
 [ext_resource path="res://scenes/mainmenu/mainmenu.gd" type="Script" id=2]
@@ -9,12 +9,6 @@
 [ext_resource path="res://scenes/mainmenu/tex_mainmenu_box_bottom.svg" type="Texture" id=7]
 [ext_resource path="res://scenes/common/tex_color_black.png" type="Texture" id=8]
 [ext_resource path="res://scenes/common/mdl_island_lowpoly.glb" type="PackedScene" id=10]
-
-[sub_resource type="Gradient" id=1]
-colors = PoolColorArray( 0.380392, 0.858824, 0.992157, 1, 0.00392157, 0.129412, 1, 1 )
-
-[sub_resource type="GradientTexture" id=2]
-gradient = SubResource( 1 )
 
 [sub_resource type="Gradient" id=3]
 offsets = PoolRealArray( 0 )
@@ -28,16 +22,6 @@ width = 1
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="background2d" type="TextureRect" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = SubResource( 2 )
-expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
